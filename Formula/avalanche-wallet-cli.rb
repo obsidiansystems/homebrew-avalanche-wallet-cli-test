@@ -11,13 +11,12 @@ class AvalancheWalletCli < Formula
   depends_on "yarn" => :build
   depends_on "nvm" => :build
   depends_on "python3" => :build
-  depends_on "npm"
   depends_on "node"
   depends_on "libusb"
+  # Not sure if this is needed
   depends_on "libusb-compat"
 
   def install
-    system "npm", "install", "libusb"
     system "yarn", "install", "--frozen-lockfile"
     libexec.install "node_modules"
     mkdir_p "#{libexec}/bin"
