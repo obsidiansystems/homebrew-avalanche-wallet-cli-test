@@ -16,10 +16,8 @@ class AvalancheWalletCli < Formula
   def install
     system "yarn", "install", "--frozen-lockfile"
     libexec.install "node_modules"
-    libexec.install "avalanche.js"
-    libexec.install "ledgerjs"
     mkdir_p "#{libexec}/bin"
-    libexec.install "cli/cli.js" => "bin/avalanche-wallet-cli"
+    libexec.install "cli/cli.js" => "bin/avalanche-cli"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
