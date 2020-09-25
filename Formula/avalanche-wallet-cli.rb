@@ -1,3 +1,4 @@
+require "language/node"
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
@@ -11,16 +12,16 @@ class AvalancheWalletCli < Formula
   depends_on "nvm" => :build
   depends_on "python3" => :build
   depends_on "npm" => :build
-  depends_on "nodejs"
+  depends_on "node"
   depends_on "libusb"
   depends_on "libusb-compat"
 
   def install
-    system "npm", "install", "usb"
-    system "yarn", "install", "--frozen-lockfile"
-    libexec.install "node_modules"
-    mkdir_p "#{libexec}/bin"
-    libexec.install "cli/cli.js" => "bin/avalanche-cli"
+    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    # system "yarn", "install", "--frozen-lockfile"
+    # libexec.install "node_modules"
+    # mkdir_p "#{libexec}/bin"
+    # libexec.install "cli/cli.js" => "bin/avalanche-cli"
     bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
