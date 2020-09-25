@@ -1,0 +1,1 @@
+homebrew-avalanche-wallet-cli
