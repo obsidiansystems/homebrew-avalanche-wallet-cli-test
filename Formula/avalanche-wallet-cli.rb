@@ -8,6 +8,8 @@ class AvalancheWalletCli < Formula
   head "https://github.com/obsidiansystems/avalanche-wallet-cli.git"
 
   depends_on "yarn" => :build
+  depends_on "nvm" => :build
+  depends_on "python3" => :build
   depends_on "nodejs"
   depends_on "libusb"
 
