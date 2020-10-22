@@ -2,7 +2,7 @@ require "language/node"
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class AvalancheWalletCli < Formula
+class AvalancheWalletCliDevelop < Formula
   desc ""
   homepage ""
   license ""
