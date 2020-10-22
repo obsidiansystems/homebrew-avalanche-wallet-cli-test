@@ -6,7 +6,7 @@ class AvalancheWalletCliDevelop < Formula
   desc ""
   homepage ""
   license ""
-  head "https://github.com/obsidiansystems/avalanche-wallet-cli/tree/develop.git"
+  head head "https://github.com/some/package.git", :branch => "develop"
 
   depends_on "yarn" => :build
   depends_on "nvm" => :build
