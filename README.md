@@ -1,1 +1,1 @@
-homebrew-avalanche-wallet-cli
+homebrew-avalanche-wallet-cli-develop
