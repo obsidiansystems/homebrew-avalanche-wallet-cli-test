@@ -11,7 +11,7 @@ class AvalancheWalletCli < Formula
   depends_on "yarn" => :build
   depends_on "nvm" => :build
   depends_on "python3" => :build
-  depends_on "node"
+  depends_on "node" => :build
   depends_on "libusb"
   # Not sure if this is needed
   depends_on "libusb-compat"
