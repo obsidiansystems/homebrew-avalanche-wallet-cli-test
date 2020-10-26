@@ -17,7 +17,7 @@ class AvalancheWalletCli < Formula
   depends_on "libusb-compat"
 
   def install
-    system "yarn", "install"
+    system "yarn", "install", "--frozen-lockfile"
     libexec.install "node_modules"
     mkdir_p "#{libexec}/bin"
     libexec.install "cli/cli.js" => "bin/avalanche-cli"
